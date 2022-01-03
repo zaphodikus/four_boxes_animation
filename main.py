@@ -216,12 +216,12 @@ for cosine_index in curve:
 
         # font fit to box
         message_string = ["THIS", "IS", "VIDEO", "STUDIO"]
-        min_weight,text_width, fnt_box = get_font_weight(fnt_box44, message_string[box_num] +'I', current_width)
+        min_weight,text_width, fnt_box = get_font_weight(fnt_box44, message_string[box_num] + 'I', current_width)
         msg_y = BOX_MAX - current_width / 2 - (min_weight / 2)
         msg_x = x + current_width/2 - text_width*0.47
         draw.text((msg_x, msg_y), message_string[box_num], font=fnt_box, fill=COLOUR_BLACK)
         draw.text(sig_coords, signature_text, font=fnt_signature, fill=COLOUR_BLACK)
-        image_copy.save(f"{folder}\image{index:03d}.jpg", "JPEG")
+        image_copy.save(f"{folder}\\image{index:03d}.jpg", "JPEG")
 
         x += current_width
     index += 1
